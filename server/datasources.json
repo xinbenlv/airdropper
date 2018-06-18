@@ -1,0 +1,8 @@
+{
+  "airdropper-server-dev": {
+    "url": "mysql://b310e7d76ac5af:56b439e7@us-cdbr-iron-east-04.cleardb.net/heroku_95e71a211226e24?reconnect=true",
+    "name": "airdropper-server-dev",
+    "connector": "mysql",
+    "all": false
+  }
+}

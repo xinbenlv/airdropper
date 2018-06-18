@@ -1,0 +1,40 @@
+{
+  "name": "AccountInfo",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": true,
+      "description": "AccountId",
+      "isArray": false
+    },
+    "type": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": false,
+      "description": "accountType",
+      "isArray": false
+    },
+    "virtualChannel": {
+      "type": "string",
+      "required": false,
+      "description": "virtual Channel such as WeChat of account"
+    },
+    "virtualAccountIds": {
+      "type": "object",
+      "required": false,
+      "description": "array of ids"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

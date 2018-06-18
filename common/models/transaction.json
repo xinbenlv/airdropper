@@ -1,0 +1,115 @@
+{
+  "name": "Transaction",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": true,
+      "description": "transaction id",
+      "isArray": false,
+      "updateResource": {
+        "id": "common.Transaction.id",
+        "modelId": "common.Transaction",
+        "facetName": "common",
+        "name": "id",
+        "type": "string",
+        "isId": true,
+        "required": true,
+        "index": true,
+        "description": "transaction id",
+        "isArray": false
+      },
+      "$promise": {},
+      "$resolved": true
+    },
+    "timestamp": {
+      "type": "date",
+      "required": false,
+      "description": "timestamp",
+      "updateResource": {
+        "id": "common.Transaction.timestamp",
+        "modelId": "common.Transaction",
+        "facetName": "common",
+        "name": "timestamp",
+        "type": "date",
+        "required": false,
+        "description": "timestamp"
+      },
+      "$promise": {},
+      "$resolved": true
+    },
+    "amount": {
+      "type": "number",
+      "required": false,
+      "index": false,
+      "updateResource": {
+        "id": "common.Transaction.amount",
+        "modelId": "common.Transaction",
+        "facetName": "common",
+        "name": "amount",
+        "type": "number",
+        "required": false,
+        "index": false
+      },
+      "$promise": {},
+      "$resolved": true
+    },
+    "ticker": {
+      "type": "string",
+      "required": false,
+      "updateResource": {
+        "id": "common.Transaction.ticker",
+        "modelId": "common.Transaction",
+        "facetName": "common",
+        "name": "ticker",
+        "type": "string",
+        "required": false
+      },
+      "$promise": {},
+      "$resolved": true
+    },
+    "from": {
+      "type": "string",
+      "required": false,
+      "description": "accountId it was sent from",
+      "updateResource": {
+        "id": "common.Transaction.from",
+        "modelId": "common.Transaction",
+        "facetName": "common",
+        "name": "from",
+        "type": "string",
+        "required": false,
+        "description": "accountId it was sent from"
+      },
+      "$promise": {},
+      "$resolved": true
+    },
+    "to": {
+      "type": "string",
+      "required": false,
+      "description": "account id it was sent to",
+      "updateResource": {
+        "id": "common.Transaction.to",
+        "modelId": "common.Transaction",
+        "facetName": "common",
+        "name": "to",
+        "type": "string",
+        "required": false,
+        "description": "account id it was sent to"
+      },
+      "$promise": {},
+      "$resolved": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
