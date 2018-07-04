@@ -1,0 +1,34 @@
+{
+  "name": "Campaign",
+  "plural": "Campaigns",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "accountId": {
+      "type": "string",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "ticker": {
+      "type": "string",
+      "required": false
+    },
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": true,
+      "isArray": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -20,5 +20,9 @@
   "AccountInfo": {
     "dataSource": "airdropper-server-dev",
     "public": true
+  },
+  "Campaign": {
+    "dataSource": "airdropper-server-dev",
+    "public": true
   }
 }
