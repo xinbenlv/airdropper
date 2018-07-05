@@ -15,8 +15,10 @@ export class MyApp {
   constructor(
     platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
     private translate: TranslateService) {
+
     console.log(`window.location.origin = ${window.location.origin}`);
-    LoopBackConfig.setBaseURL(window.location.origin);
+    if (window.location.port != '8100')
+      LoopBackConfig.setBaseURL(window.location.origin);
     LoopBackConfig.setApiVersion('api');
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

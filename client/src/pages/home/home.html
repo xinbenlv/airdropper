@@ -3,10 +3,10 @@
     <ion-title>{{'GLOBAL.TITLE' | translate}}</ion-title>
     <ion-buttons end>
       <button ion-button (click)="changeLang('en')">
-        <i class="flag-icon flag-icon-gb"></i>
+        <i [ngClass]="translate.currentLang == 'en' ? 'flag-large' : ''" class="flag-icon flag-icon-gb"></i>
       </button>
       <button ion-button (click)="changeLang('zh')">
-        <i class="flag-icon flag-icon-cn"></i>
+        <i [ngClass]="translate.currentLang == 'zh' ? 'flag-large' : ''" class="flag-icon flag-icon-cn"></i>
       </button>
     </ion-buttons>
 
