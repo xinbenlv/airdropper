@@ -1113,12 +1113,14 @@ definitions:
       type:
         description: accountType
         type: string
-      virtualChannel:
-        description: virtual Channel such as WeChat of account
-        type: string
       virtualAccountIds:
         description: array of ids
         type: object
+      virtualChannel:
+        description: virtual Channel such as WeChat of account
+        type: string
+      realAccountId:
+        type: string
     required:
       - id
       - type
