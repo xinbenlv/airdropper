@@ -76,7 +76,7 @@
       "$resolved": true
     },
     "from": {
-      "type": "string",
+      "type": "AccountInfo",
       "required": false,
       "description": "accountId it was sent from",
       "updateResource": {
@@ -87,12 +87,10 @@
         "type": "string",
         "required": false,
         "description": "accountId it was sent from"
-      },
-      "$promise": {},
-      "$resolved": true
+      }
     },
     "to": {
-      "type": "string",
+      "type": "AccountInfo",
       "required": false,
       "description": "account id it was sent to",
       "updateResource": {
@@ -103,9 +101,7 @@
         "type": "string",
         "required": false,
         "description": "account id it was sent to"
-      },
-      "$promise": {},
-      "$resolved": true
+      }
     }
   },
   "validations": [],

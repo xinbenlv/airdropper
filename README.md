@@ -82,24 +82,7 @@ VirtualAccountIds
 
   ```bash
   ./node_modules/.bin/lb-sdk server/server \
-  ../client/src/loopbacksdk \
-  -d ng2web -i disabled -v enabled
-  ```
-    ./node_modules/.bin/lb-sdk server/server \
-    ../haoshiyou-ai/loopbacksdk \
-    -d ng2web -i disabled -v enabled
-  or for `haoshiyou-bot`
-
-  ```bash
-  ./node_modules/.bin/lb-sdk server/server \
-  ../haoshiyou-bot/v1/loopbacksdk \
+  ../airdropper-client/client/src/loopbacksdk \
   -d ng2web -i disabled -v enabled
   ```
 
-  or for `haoshiyou-ai`
-
-  ```bash
-  ./node_modules/.bin/lb-sdk server/server \
-  ../haoshiyou-ai/loopbacksdk \
-  -d ng2web -i disabled -v enabled
-  ```

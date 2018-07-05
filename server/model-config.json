@@ -15,11 +15,15 @@
   },
   "Transaction": {
     "dataSource": "airdropper-server-dev",
-    "public": true
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "AccountInfo": {
     "dataSource": "airdropper-server-dev",
-    "public": true
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "Campaign": {
     "dataSource": "airdropper-server-dev",

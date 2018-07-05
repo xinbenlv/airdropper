@@ -22,23 +22,37 @@
       "description": "accountType",
       "isArray": false
     },
-    "virtualAccountIds": {
-      "type": "object",
-      "required": false,
-      "description": "array of ids"
-    },
     "virtualChannel": {
       "type": "string",
       "required": false,
       "description": "virtual Channel such as WeChat of account"
     },
     "realAccountId": {
-      "type": "string",
+      "type": "AccountInfo",
       "required": false
+    },
+    "virtualAccountIds": {
+      "type": [
+        "AccountInfo"
+      ],
+      "required": false,
+      "description": "array of ids"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "realAccountInfo": {
+      "type": "belongsTo",
+      "model": "AccountInfo",
+      "foreignKey": "",
+      "primaryKey": "id"
+    },
+    "virtualAccountInfos": {
+      "type": "hasMany",
+      "model": "AccountInfo",
+      "foreignKey": "realAccountId"
+    }
+  },
   "acls": [],
   "methods": {}
 }
