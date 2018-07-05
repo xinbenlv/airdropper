@@ -52,8 +52,8 @@ export class ReceivePage {
     if (await this.validate()) {
       console.log(`validate!`);
       let alert = this.alertCtrl.create({
-        title: 'Confirm WeChatId',
-        message: `Do you confirm your WeChatId is ${this.accountId}?`,
+        title: `Confirm ${this.virtualChannel}`,
+        message: `Do you confirm your ${this.virtualChannel} is ${this.accountId}?`,
         buttons: [
           {
             text: 'Cancel',

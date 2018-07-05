@@ -49,7 +49,7 @@ ToAccountId(string)
 AccountInfo
 Type: TokenDropClient, RealUser, Campaign, VirtualUser, External
 Id
-VirtualChannel; // if type=VirtualUser
+VirtualChannel: WeChatId, Email, PhoneNumber
 VirtualAccountIds
 
 

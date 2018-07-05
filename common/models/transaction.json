@@ -76,7 +76,7 @@
       "$resolved": true
     },
     "from": {
-      "type": "AccountInfo",
+      "type": "string",
       "required": false,
       "description": "accountId it was sent from",
       "updateResource": {
@@ -90,7 +90,7 @@
       }
     },
     "to": {
-      "type": "AccountInfo",
+      "type": "string",
       "required": false,
       "description": "account id it was sent to",
       "updateResource": {
@@ -105,7 +105,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "toAccountInfo": {
+      "type": "belongsTo",
+      "model": "AccountInfo",
+      "foreignKey": "to"
+    },
+    "fromAccountInfo": {
+      "type": "belongsTo",
+      "model": "AccountInfo",
+      "foreignKey": "from"
+    }
+  },
   "acls": [],
   "methods": {}
 }

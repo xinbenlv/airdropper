@@ -48,7 +48,7 @@
                 <name>GLOBAL</name>
                 <children>
                     <concept_node>
-                        <name>RECEIPIENTS</name>
+                        <name>AIRDROP_WALLET</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -150,6 +150,23 @@
                         </translations>
                     </concept_node>
                     <concept_node>
+                        <name>RECEIPIENTS</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>zh-CN</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
                         <name>TICKER</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
@@ -223,23 +240,6 @@
                         </children>
                     </folder_node>
                     <concept_node>
-                        <name>AIRDROP_WALLET</name>
-                        <definition_loaded>false</definition_loaded>
-                        <description></description>
-                        <comment></comment>
-                        <default_text></default_text>
-                        <translations>
-                            <translation>
-                                <language>en-US</language>
-                                <approved>false</approved>
-                            </translation>
-                            <translation>
-                                <language>zh-CN</language>
-                                <approved>false</approved>
-                            </translation>
-                        </translations>
-                    </concept_node>
-                    <concept_node>
                         <name>VIRTUAL_ACCOUNT_INFO</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
@@ -282,7 +282,7 @@
                         <name>RECEIVE</name>
                         <children>
                             <concept_node>
-                                <name>CONFIRM_TITLE_PLEASE_TYPE_IN_WECHAT_ID</name>
+                                <name>CONFIRM_SUBTITLE_PLEASE_TYPE_IN_WECHAT_ID</name>
                                 <definition_loaded>false</definition_loaded>
                                 <description></description>
                                 <comment></comment>
@@ -299,7 +299,7 @@
                                 </translations>
                             </concept_node>
                             <concept_node>
-                                <name>CONFIRM_SUBTITLE_PLEASE_TYPE_IN_WECHAT_ID</name>
+                                <name>CONFIRM_TITLE_PLEASE_TYPE_IN_WECHAT_ID</name>
                                 <definition_loaded>false</definition_loaded>
                                 <description></description>
                                 <comment></comment>
@@ -333,7 +333,41 @@
                                 </translations>
                             </concept_node>
                             <concept_node>
-                                <name>WECHAT_ID_PLACEHOLDER</name>
+                                <name>VIRTUAL_ACCOUNT_ID_LABEL</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description></description>
+                                <comment></comment>
+                                <default_text></default_text>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>zh-CN</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
+                                <name>VIRTUAL_ACCOUNT_ID_PLACEHOLDER</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description></description>
+                                <comment></comment>
+                                <default_text></default_text>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>zh-CN</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
+                                <name>VIRTUAL_CHANNEL_LABEL</name>
                                 <definition_loaded>false</definition_loaded>
                                 <description></description>
                                 <comment></comment>
