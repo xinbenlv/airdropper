@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "start": "node .",
     "posttest": "npm run lint && nsp check",
-    "build": "./scripts/build.sh"
+    "build": "./scripts/build.sh",
+    "dev": "concurrently \"node .\" \"cd client && ionic serve\"",
+    "serve": "cd client && npm run ionic:build --prod && cd .. && node ."
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -23,6 +25,7 @@
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
+    "concurrently": "^3.6.0",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
     "nsp": "^2.1.0"

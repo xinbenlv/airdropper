@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{'GLOBAL.TITLE' | translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="changeLang('en')">
+        <i class="flag-icon flag-icon-gb"></i>
+      </button>
+      <button ion-button (click)="changeLang('zh')">
+        <i class="flag-icon flag-icon-cn"></i>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <span class="flag-icon-background flag-icon-us"></span>
+    <ion-card-header text-center>
+      {{'HOME.TABLE_TITLE' | translate}}
+    </ion-card-header>
+    <ion-card-content></ion-card-content>
+    <tx-comp [transactions]="transactions"></tx-comp>
+    <h2 *ngIf="loading">loading...</h2>  <!-- TODO add load more feature -->
+  </ion-card>
+</ion-content>

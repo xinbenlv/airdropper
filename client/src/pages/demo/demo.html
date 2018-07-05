@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{'GLOBAL.TITLE' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{ 'GLOBAL.CAMPAIGN' | translate }}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-lines>
+        <ion-item *ngFor="let c of demoCampaigns">
+          <ion-label item-start>{{c}}</ion-label>
+          <button outline ion-button item-end>{{'DEMO.VIEW' | translate}}</button>
+          <a href="/#/receive/campaign/{{c}}" outline ion-button item-end>{{ 'DEMO.GET_IT' | translate}}</a>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      {{ 'GLOBAL.RECEIPIENTS' | translate }}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-lines>
+        <ion-item *ngFor="let a of demoAccounts">
+          <ion-label item-start>{{a}}</ion-label>
+          <a href="/#/wallet/{{a}}" outline ion-button item-end>{{'DEMO.VIEW' | translate}}</a>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

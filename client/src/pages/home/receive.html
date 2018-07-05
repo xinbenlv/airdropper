@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{'HOME.RECEIVE.TITLE' | translate: {ticker: ticker} }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center padding>
+  <ion-list no-lines>
+
+      <ion-item no-lines>
+        <ion-label>{{'GLOBAL.CAMPAIGN' | translate }}</ion-label>
+        <ion-label>{{campaignId}}</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label >{{'GLOBAL.TICKER' | translate}}</ion-label>
+        <ion-label >{{ticker}}</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>{{'GLOBAL.AMOUNT' | translate}}</ion-label>
+        <ion-label>{{amountEach}}</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label floating>{{'GLOBAL.WECHAT_ID' | translate}}</ion-label>
+
+          <ion-input text-center type="text" [(ngModel)]="accountId"
+                     placeholder=" {{'HOME.RECEIVE.WECHAT_ID_PLACEHOLDER' | translate}}"></ion-input>
+      </ion-item>
+      <ion-item no-lines></ion-item>
+      <button ion-button color="secondary" outline (click)="onClick()">Cancel</button>
+      <button ion-button color="secondary" (click)="onClick()">Accept</button>
+
+  </ion-list>
+</ion-content>
+<ion-footer>
+
+</ion-footer>

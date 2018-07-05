@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{'GLOBAL.AIRDROP_WALLET' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      {{ 'HOME.WALLET.ACCOUNT_INFO' | translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngIf="accountInfo" no-lines>
+        <ion-item>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label item-left>{{ 'HOME.WALLET.ACCOUNT_TYPE' | translate}}</ion-label>
+          <ion-label item-right>{{'MODEL.ACCOUNT_TYPE_ENUM.' + accountInfo.type | translate}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label item-left>{{ 'HOME.WALLET.RELATED_REAL_ACCOUNT' | translate}}</ion-label>
+          <ion-label item-right >{{accountInfo.realAccountId}}</ion-label>
+        </ion-item>
+
+        <ion-item *ngIf="realAccountId">
+          <ion-label item-left>是否激活</ion-label>
+          <ion-badge item-right>{{ 'HOME.WALLET.ACTIVATED' | translate }}</ion-badge>
+        </ion-item>
+        <ion-item *ngIf="accountInfo.type == 'VirtualUser' && !accountInfo.realAccountId">
+          <button item-end (click)="activateRealAccount()" >
+            {{'HOME.WALLET.ACTIVATE_BUTTON' | translate }}</button>
+        </ion-item>
+
+        <ion-item *ngIf="accountInfo.type=='RealUser'">
+          <ion-label>{{'GLOBAL.VIRTUAL_ACCOUNT_INFO' | translate }}</ion-label>
+          <ion-label>{{accountInfo.virtualAccountIds}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>{{'HOME.WALLET.YOUR_AIRDROP_ACTIVITY' | translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item *ngIf="!isLoaded">
+        <button ion-button (click)="loadTransaction()">{{ 'HOME.WALLET.OBTAIN_ACTIVITY' | translate }}</button>
+      </ion-item>
+      <tx-comp [transactions]="transactions"></tx-comp>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="isLoaded && accountInfo.type=='RealUser'">
+    <h1>
+      Withdraw
+    </h1>
+    <ion-list>
+      <ion-item>
+        <ion-label>请输入你的以太坊地址</ion-label>
+        <ion-input placeholder="地址: Ox...."></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>提取的代币代码</ion-label>
+        <ion-input placeholder="Ticker"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>提取数量</ion-label>
+        <ion-input placeholder="amount"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>手续费(ETH)</ion-label>
+        <ion-label placeholder="fee">0.015</ion-label>
+      </ion-item>
+      <ion-item>
+        <button ion-button (click)="alert('暂未开放')">提交</button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+</ion-content>

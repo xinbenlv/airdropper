@@ -1,0 +1,16 @@
+<ion-grid>
+  <ion-row class="header">
+    <ion-col>{{'GLOBAL.DATE' | translate}}</ion-col>
+    <ion-col>{{'GLOBAL.TICKER' | translate}}</ion-col>
+    <ion-col>{{'GLOBAL.AMOUNT' | translate}}</ion-col>
+    <ion-col>{{'GLOBAL.CAMPAIGN' | translate}}</ion-col>
+    <ion-col>{{'GLOBAL.TO' | translate}}</ion-col>
+  </ion-row>
+  <ion-row *ngFor="let tx of transactions">
+    <ion-col>{{tx.timestamp | date: 'yyyy-MM-dd hh:mm'}}</ion-col>
+    <ion-col>{{tx.ticker}}</ion-col>
+    <ion-col>{{tx.amount}}</ion-col>
+    <ion-col>{{tx.from}}</ion-col>
+    <ion-col>{{tx.to}}</ion-col>
+  </ion-row>
+</ion-grid>
